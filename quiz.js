@@ -1,9 +1,15 @@
 var grow= [];
+
 function tree(branches, leaf) {
-	for(i=0; i<branches; i++) {
-		grow.push(leaf);
-		grow.unshift(" ");
-		console.log(grow.join(""));
+	if (document.getElementById("branches").value==="" || document.getElementById("leaf").value===""){
+		alert("Both fields must have a value");
+	} else {
+		for(i=0; i<branches; i++) {
+
+			grow.push(leaf);
+			grow.unshift(" ");
+			console.log(grow.join(""));
+		}
 	}
 }
 var button = document.getElementById("button");
@@ -18,6 +24,7 @@ function enterKey(e) {
   		tree(document.getElementById("branches").value, document.getElementById("leaf").value);
   }
 }
+
 
 
 
