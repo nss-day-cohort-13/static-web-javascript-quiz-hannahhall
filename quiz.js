@@ -5,10 +5,9 @@ function tree(branches, leaf) {
 		alert("Both fields must have a value");
 	} else {
 		for(i=0; i<branches; i++) {
-
 			grow.push(leaf);
 			grow.unshift(" ");
-			console.log(grow.join(""));
+			console.log(grow);
 		}
 	}
 }
@@ -17,7 +16,8 @@ function growTree (clickEvent) {
 	tree(document.getElementById("branches").value, document.getElementById("leaf").value);
 }
 button.addEventListener("click", growTree);
-document.getElementById("leaf").addEventListener("keydown", enterKey, false);
+document.getElementById("leaf").addEventListener("keydown", enterKey);
+document.getElementById("branches").addEventListener("keydown", enterKey)
 function enterKey(e) {
   var keyCode = e.keyCode;
   if(keyCode==13) {
