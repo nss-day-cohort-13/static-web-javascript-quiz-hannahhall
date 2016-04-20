@@ -23,10 +23,10 @@ function growTree (clickEvent) {
 	tree(branchNum.value, leafNum.value);
 }
 function enterKey(e) {
-  var keyCode = e.keyCode;
-  if(keyCode==13) {
-  		tree(branchNum.value, leafNum.value);
-  }
+	var keyCode = e.keyCode;
+	if(keyCode==13) {
+		tree(branchNum.value, leafNum.value);
+	}
 }
 
 button.addEventListener("click", growTree);
