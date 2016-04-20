@@ -7,10 +7,12 @@ function tree(branches, leaf) {
 	if (branchNum.value==="" || leafNum.value===""){
 		alert("Both fields must have a value");
 		} else{
-		for(j=0; j<branches; j++) {
+		for(j=0; j<branches-1; j++) {
 			grow.unshift(" ");
 		}
-		for(i=0; i<branches; i++) {
+		grow.push(leaf);
+		console.log(grow.join(""));
+		for(i=0; i<branches-1; i++) {
 			grow.push(leaf);
 			grow.push(leaf);
 			grow.shift(" ");
